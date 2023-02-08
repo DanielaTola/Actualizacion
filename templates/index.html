@@ -20,59 +20,70 @@
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar" class="fa fa-bars"></label>
         <nav class="navbar">
-            <a href="#modal">Inicio</a>
-            <!-- <a href="#registro">Registro</a> -->
+            <a href="#wrapper">Inicio</a>
             <a href="#acercaDe">Acerca de</a>
         </nav>
     </header>
     <section class="inicio" id="inicio">
         <div class="contet">
             <h3>Deteccion de <span>Sigatoka Negra</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid sequi nihil inventore in magni officiis officia nesciunt, sit molestias harum id tempora quae totam ratione quaerat, consequuntur accusantium culpa.</p>
-            <a href="#modal" class="btn-p" id="btn-p">Inicio</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquid sequi nihil inventore in magni
+                officiis officia nesciunt, sit molestias harum id tempora quae totam ratione quaerat, consequuntur
+                accusantium culpa.</p>
+            <a href="#wrapper" class="btn-p" id="btn-p">Inicio</a>
         </div>
         <div class="image">
             <img src="/static/img/inteligencia-artificial (1).png" alt="">
         </div>
     </section>
 
-    <section class="modal" id="modal">
-        <div class="modal_container">
-            <div class="form-box">
-                <h2>Registrase</h2>
-                <form action="">
-                    <div class="input-group">
-                        <div class="input-field">
-                            <i class="fa-regular fa-user"></i>
-                            <input type="text" placeholder="Name">
-                        </div>
-                        <div class="input-field">
-                            <i class="fa-regular fa-envelope"></i>
-                            <input type="email" placeholder="Email">
-                        </div>
-                        <div class="input-field">
-                            <i class="fa-regular fa-lock"></i>
-                            <input type="password" placeholder="Password">
-                        </div>
-                        <p>Olvidaste contrasenia <a href="#">Click aqui</a></p>
-                    </div>
-                    <div class="btn-field">
-                        <a href="" class="btn">Registrarse</a>
-                        <a href="" class="btn" id="disable">Iniciar sesion</a>
-                    </div>
-                </form>
-            </div>
-            <!-- <figure class="modal_picture">
-                <img src="/static/img/Data organization_Outline.png" class="modal_img">
-            </figure>
-            <h2>Hola es un modal</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ab laudantium sit. Ducimus non enim nemo nihil repudiandae, quia voluptate.</p>
-            <a href="#inicio" class="btn" id="modal_close">Estoy de acuerdo</a> -->
+    <div class="wrapper" id="wrapper">
+        <div class="form-wrapper sign-in" id="sign-in">
+            <a href="#inicio" class="close"><i class="fa-solid fa-xmark"></i></a>
+            <form action="">
+                <h2>Inicio de sesion</h2>
+                <div class="input-group">
+                    <input type="text">
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password">
+                    <label for="">Password</label>
+                </div>
+                <a href="#inicio" class="btn-login">Iniciar Sesion</a>
+                <div class="sing-link">
+                    <p>No tienes una cuenta <a href="#wrapper3" class="singUp-link">Registrate</a></p>
+                </div>
+            </form>
         </div>
-    </section>
 
-
-    <!-- <script src="/static/js/index.js"></script> -->
+    </div>
+    <div class="wrapper" id="wrapper3">
+        <div class="form-wrapper sign-up" id="sign-up">
+            <a href="#inicio" class="close"><i class="fa-solid fa-xmark"></i></a>
+            <form action="">
+                <h2>Registrarse</h2>
+                <div class="input-group">
+                    <input type="text">
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email">
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password">
+                    <label for="">Password</label>
+                </div>
+                <div class="input-group">
+                    <input type="password">
+                    <label for="">Confirm Password</label>
+                </div>
+                <a href="#inicio" class="btn-login">Registrarse</a>
+            </form>
+        </div>
+    </div>
+    <script src="/static/js/index.js"></script>
 </body>
 
 </html>

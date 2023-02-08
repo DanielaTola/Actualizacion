@@ -150,7 +150,8 @@ header label{
     
 }
 
-.modal{
+
+.wrapper{
     position: fixed;
     top:0;
     bottom: 0;
@@ -166,25 +167,45 @@ header label{
     transition: opacity .5s;
 }
 
-.modal:target{
+.wrapper:target{
     --opacity:1;
     --pointer:unset;   
 }
 
-.modal_container{
-    margin: auto;
-    background-color: #f9f9f9;
-    width: 90%;
-    max-width: 600px;
-    height: 80vh;
-    max-height: 80%;
-    overflow: hidden;
-    text-align: center;
-    padding: 2.5rem 2.5rem;
-    border-radius: 1rem;
+.close{
+    position: relative;
+    top:0;
+    left: 42rem;
+    width: 3rem;
+    height: 3rem;
+    background: var(--limon);
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.modal:target .modal_container{
+.close i{
+    font-size: 2rem;
+    color: #fff;
+}
+.form-wrapper{
+    margin: auto;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 500px;
+    max-height: 700px;
+    /* overflow: hidden; */
+    text-align: center;
+    padding: 2.5rem 2.5rem;
+    border-radius: 2rem;
+
+}
+
+.wrapper:target .form-wrapper{
     animation: show 1s .5s backwards;
 }
 
@@ -197,134 +218,118 @@ header label{
     }
 }
 
-.modal_picture{
-    width: 80%;
-    margin: 0 auto;
-    max-width: 400px;
-    margin-bottom: 2rem;
-}
-
-.modal:target .modal_picture{
-    animation: scale .5s 1.5s backwards;
-}
-@keyframes scale{
-    0%{
-        transform: scale(0);
-    }
-}
-
-.modal_img{
-    width: 100%;
-    display: block;
-}
-
-.modal_container h2{
+.form-wrapper  h2{
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 500;
-
-}
-
-.modal_container h2 --blod{
-    font-weight: 700;
-}
-
-.modal_container p{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    text-transform: initial;
-    font-size: 1.5rem;
-}
-/* Login */
-.form-box{
-    width: 100%;
-    max-width: 500px;
-    max-height: 500px;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    background:  #eaeaea;
-    padding: 1rem 2rem 3rem ;
-    text-align: center;
-    border-radius: 3rem;
-}
-
-.form-box h2{
-    font-size: 2rem;
+    font-weight: 5rem;
     margin-bottom: 2rem;
-    color: var(--verde);
-    position: relative;
+    color: var(--limon)
 }
 
-.form-box h2::after{
-    content: '';
-    width: 14rem;
-    height: .4rem;
-    border: 6rem;
-    background: var(--verde);
-    position: absolute;
-    bottom: -1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    
+.wrapper .form-wrapper .sing-up{
+    transform: translateX(850px);
 }
-
-.input-field{
-    background: var(--limon);
-    margin: 3rem 0;
-    border-radius: .8rem;
-    display: flex;
-    align-items: center;
-}
-
-.input-field i{
-    margin-left: 2rem;
-    color: black;
-    size: 3rem;
-}
-
-input{
-    width: 100%;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    padding: 1rem .8rem;
-}
-
-.btn-field{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn-field a{
-    margin: 0 2rem;
-    flex-basis: 48%;
-    background: var(--limon);
-    height: 4rem;
-    transition: background 1s;
-}
-
 .input-group{
-    height: 80%;
+    position: relative;
+    margin: 3rem 0;
 }
 
-.btn-field #disable{
-    background:#666 ;
-    color: #555;
-    d
+.input-group label{
+    position: absolute;
+    top:50%;
+    left: 5rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    padding: 0 .2rem;
+    pointer-events: none;
+    transition: .5s;
 }
 
-/*medias Queries*/
+.input-group input{
+    width: 35rem;
+    background: transparent;
+    height: 5rem;
+    font-size: 2rem;
+    color: #333;
+    padding: 0 1rem;
+    border: .3rem solid var(--limon);
+    outline: none;
+    border-radius: .9rem;
+   transition: .5s;
+}
+
+.input-group input:focus~label, .input-group input:valid~label{
+    top:0;
+    font-size:1.5rem;
+    background: #f9f9f9;
+    color: var(--limon);
+}
+
+.input-group input:focus, .input-group input:valid{
+    margin: 1rem solid var(--limon);
+}
+
+.btn-login{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 4rem;
+    background-color: var(--limon);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    font-size: 2rem;
+    color:#fff;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 1.3rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    outline: none;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.8rem;
+    transition: all .3s linear;
+}
+
+.btn-login:hover{
+    transform: scale(1.1);
+}
+
+.sing-link{
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.sing-link p{
+    color: #333;
+    text-transform: initial;
+}
+
+.sing-link p a{
+    color: var(--limon);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.sing-link p a:hover{
+    text-decoration: underline;
+}
 
 @media(max-width:1200px){
     html{
         font-size: 55%;
     }
+
+    .input-group label{
+        transform: translateX(60%) translateY(-50%);
+    }
 }
+
 @media(max-width:768px){
     header label{
         visibility: visible;
@@ -375,35 +380,7 @@ input{
         font-size: 1.5rem;
     }
 
-    .modal_container h2{
-        font-size: 1.5rem;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 500;
     
-    }
-    
-    .modal_container p{
-        font-size: 1rem;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 500;
-    
-    }
-
-    .btn , .btn-p,  .btn-e{
-        display: inline-block;
-        margin-top: 1rem;
-        padding: .8rem 3rem;
-        border-radius: 5rem;
-        background: var(--degradado);
-        font-size: 1rem;
-        color: #f9f9f9;
-        text-transform: uppercase;
-        cursor: pointer;
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-        transition: all .3s linear;
-    }
 }
 
 @media(max-width:450px){
@@ -411,6 +388,24 @@ input{
         font-size: 49%;
     }
 
+    .form-wrapper{
+        max-width: 300px;
+        max-height: 600px;    
+    }
+    .btn-login{
+        width: 90%;
+    }
+    
+    .input-group label{
+        transform: translateY(-50%) translateX(0);
+    }
 
+    .input-group input{
+        width: 30rem;
+    }
+
+    .sing-link{
+       width: 98%;
+    }
 }
 
