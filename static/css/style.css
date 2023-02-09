@@ -8,6 +8,7 @@
     --limon:#b725d1;  */
     --degradado:linear-gradient(90deg, var(--limon), var(--verde));
 }
+
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -18,6 +19,7 @@
     border: none;
     text-transform: capitalize;
 }
+
 *::selection{
     background: var(--limon);
     color: white;
@@ -29,7 +31,7 @@ html{
 }
 
 body{
-    background: #f9f9f9;
+    width: 100%;
 }
 
 section{
@@ -39,7 +41,8 @@ section{
     padding-bottom: 2rem;
 }
 
-.btn , .btn-p,  .btn-e{
+
+.btn{
     display: inline-block;
     margin-top: 1rem;
     padding: .8rem 3rem;
@@ -53,9 +56,19 @@ section{
     transition: all .3s linear;
 }
 
-
-.btn:hover , .btn-p:hover, .btn-e:hover{
+.btn:hover {
     transform: scale(1.1);
+}
+
+.heinding{
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--verde);
+    color: transparent;
+    font-size: 3.5rem;
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 1rem;
 }
 
 header{
@@ -132,7 +145,7 @@ header label{
 
 .inicio .contet h3{
     font-size: 5.5rem;
-    color: #666;
+    color: #333;
     text-transform: uppercase;
     
 }
@@ -149,7 +162,6 @@ header label{
     padding: 1rem 0;
     
 }
-
 
 .wrapper{
     position: fixed;
@@ -192,6 +204,7 @@ header label{
     font-size: 2rem;
     color: #fff;
 }
+
 .form-wrapper{
     margin: auto;
     background-color: #f9f9f9;
@@ -319,6 +332,44 @@ header label{
 .sing-link p a:hover{
     text-decoration: underline;
 }
+/*pantalla de home*/
+
+.detalle .caja-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.detalle  .caja-contenedor .caja{
+    flex: 2 2 40rem;
+    background: #f3fff7b0;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    box-shadow: 0 .5rem 1 rem rgba(0, 0, 0, .2);
+    margin: 1.5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: .2s linear;
+}
+
+.detalle .caja-contenedor .caja  img{
+    height: 15rem;
+}
+
+.detalle .caja-contenedor .caja h3{
+    font-size: 2rem;
+    color: #333;
+    padding-top: 2rem;
+}
+
+.detalle .caja-contenedor .caja p{
+    font-size: 1.3rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
 
 @media(max-width:1200px){
     html{
@@ -329,7 +380,6 @@ header label{
         transform: translateX(60%) translateY(-50%);
     }
 }
-
 @media(max-width:768px){
     header label{
         visibility: visible;
