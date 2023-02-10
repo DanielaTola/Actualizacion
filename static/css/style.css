@@ -7,6 +7,7 @@
     /* --verde:#37064a; 
     --limon:#b725d1;  */
     --degradado:linear-gradient(90deg, var(--limon), var(--verde));
+    --degradado2: linear-gradient(135deg, #aaf7fb 0%, #04cfaa 100%);
 }
 
 *{
@@ -47,9 +48,9 @@ section{
     margin-top: 1rem;
     padding: .8rem 3rem;
     border-radius: 5rem;
-    background: var(--degradado);
+    background: var(--degradado2);
     font-size: 1.8rem;
-    color: #f9f9f9;
+    color: #343434;
     text-transform: uppercase;
     cursor: pointer;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -392,7 +393,7 @@ header label{
 }
 
 .deteccion .columna .contet{
-    flex: 1 1 40rem;
+    flex: 1 1 30rem;
 }
 
 .deteccion .columna .contet h3{
@@ -403,17 +404,125 @@ header label{
 .deteccion .columna .contet p{
     font-size: 1.6rem;
     color: #666;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     text-align: justify;
 }
-
+/*Cargar la imagen*/
 .bottons{
     display: grid;
-    height: 100%;
+    width: 100%;
     place-items: center;
     text-align: center;
-    border: #0c443a solid;
+    height: 55rem;
+    /* border: #0c443a solid; */
 }
+
+.bottons .wrapper-img{
+    position: relative;
+    height: 40rem;
+    width: 60%;
+    border: .2rem dashed #c2cdda;
+    border-radius: 1.2rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bottons .active{
+    border: none;
+}
+.wrapper-img .image-detect{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-img .image-detect #img-carga{
+    height: 40rem;
+    width: 100%;
+    object-fit: cover;
+    alt: none;
+}
+
+.wrapper-img .icon{
+    font-size: 4rem;
+    color: var(--limon);
+}
+
+.wrapper-img .text{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--limon);
+    text-transform: initial;
+   
+}
+
+.wrapper-img #cancel-btn{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    color: var(--limon);
+    display: none;
+}
+
+.bottons .active:hover #cancel-btn{
+    display: block;
+}
+
+.bottons #cancel-btn:hover{
+    color:var(--verde) ;
+}
+
+
+.wrapper-img .file-name{
+    position: absolute;
+    bottom: 0;
+    color: #1d1b1b;
+    width: 100%;
+    height: 3rem;
+    padding: .2rem 0;
+    font-size: 1.3rem;
+    text-transform: initial;
+    background: var(--degradado2);
+    /* display: none; */
+}
+
+.buttosns-actions {
+    position: relative;
+    width: 60%;
+    display: grid;
+    
+}
+
+.bottons  #custom-btn{
+   margin: .8rem;
+   width: 100%;
+   height: 4rem;
+   display: block;
+   border: none;
+   outline: none;
+   background: var(--degradado2);
+   border-radius: 1.2rem;
+   color:  #1d1b1b;
+   font-size: 1.5;
+   text-transform: initial;
+   cursor: pointer;
+}
+.result{
+    /* border: #0c443a solid; */
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.contactanos{
+    background:#aaf7fb ;
+    height: 40rem;
+}
+
 @media(max-width:1200px){
     html{
         font-size: 55%;
