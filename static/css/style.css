@@ -243,6 +243,7 @@ header label{
 .wrapper .form-wrapper .sing-up{
     transform: translateX(850px);
 }
+
 .input-group{
     position: relative;
     margin: 3rem 0;
@@ -370,7 +371,49 @@ header label{
     padding: 1rem 0;
 }
 
+.deteccion{
+    background: #f9f9f9;
+    width: 100%;
+}
 
+.deteccion .columna{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.deteccion .columna .image{
+    flex: 1 1 30rem;
+}
+
+.deteccion .columna .image img{
+    width: 100%;
+}
+
+.deteccion .columna .contet{
+    flex: 1 1 40rem;
+}
+
+.deteccion .columna .contet h3{
+    font-size: 3rem;
+    color: #333;
+}
+
+.deteccion .columna .contet p{
+    font-size: 1.6rem;
+    color: #666;
+    padding: 1.5rem 0;
+    text-align: justify;
+}
+
+.bottons{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    border: #0c443a solid;
+}
 @media(max-width:1200px){
     html{
         font-size: 55%;
@@ -430,8 +473,33 @@ header label{
         font-size: 1.5rem;
     }
 
-    
+    .input-group label{
+        transform: translateY(-50%);
+        top:60%;
+        left:12rem;
+        font-size: 2rem;
+        padding: 0 .1rem;
+    }
+
+    .btn-login{
+        width: 60%;
+    }
+    .input-group input{
+        width: 30rem;
+    }
+
+    .input-group{
+        position: relative;
+    }
+    .sing-link{
+       width: 98%;
+    }
+    .deteccion .columna .contet .bottons input[type="file"]{
+        width: 100%;
+    }
 }
+    
+
 
 @media(max-width:450px){
     html{
@@ -442,12 +510,17 @@ header label{
         max-width: 300px;
         max-height: 600px;    
     }
+
     .btn-login{
         width: 90%;
     }
     
     .input-group label{
-        transform: translateY(-50%) translateX(0);
+        transform: translateY(-50%);
+        top:60%;
+        left:5rem;
+        font-size: 2rem;
+        padding: 0 .1rem;
     }
 
     .input-group input{
@@ -456,6 +529,19 @@ header label{
 
     .sing-link{
        width: 98%;
+    }
+
+    .deteccion .columna .contet .bottons a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .deteccion .columna .contet .bottons a:last-child{
+        margin: 1rem 0;
+    }
+
+    .deteccion .columna .contet .bottons input[type="file"]{
+        width: 100%;
     }
 }
 
